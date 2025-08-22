@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payooo Dashboard</title>
+  <!-- tailwindcss -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#f4f5f7] h-[100vh]  flex justify-center p-6">
+
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 space-y-6">
+
+    <!-- Balance + Logout -->
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-500 text-sm">Available Balance</p>
+        <p class="text-2xl font-bold text-blue-600">$45000</p>
+      </div>
+      <button class="btn btn-outline btn-sm flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7" />
+        </svg>
+        Log Out
+      </button>
+    </div>
+
+    <!-- Welcome -->
+    <div>
+      <h2 class="text-xl font-bold">🔥 Welcome to Payooo!</h2>
+      <p class="text-gray-600 text-sm">Enjoy easy and convenient financial services with us.<br/>Cashout charge is low and</p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="grid grid-cols-3 gap-4">
+      <button class="btn btn-outline flex flex-col items-center h-20">
+        <span>💰</span>
+        <span class="text-sm">Add Money</span>
+      </button>
+      <button class="btn btn-outline flex flex-col items-center h-20">
+        <span>🏧</span>
+        <span class="text-sm">Cashout</span>
+      </button>
+      <button class="btn btn-outline flex flex-col items-center h-20">
+        <span>💳</span>
+        <span class="text-sm">Transfer</span>
+      </button>
+      <button class="btn btn-outline flex flex-col items-center h-20">
+        <span>🎁</span>
+        <span class="text-sm">Get Bonus</span>
+      </button>
+      <button class="btn btn-outline flex flex-col items-center h-20">
+        <span>🧾</span>
+        <span class="text-sm">Pay Bill</span>
+      </button>
+      <button class="btn btn-outline flex flex-col items-center h-20">
+        <span>📊</span>
+        <span class="text-sm">Transactions</span>
+      </button>
+    </div>
+
+    <!-- Latest Payments -->
+    <div class="space-y-4">
+      <div class="flex justify-between items-center">
+        <h3 class="text-lg font-semibold">Latest Payment</h3>
+        <a href="#" class="text-blue-600 text-sm">View All</a>
+      </div>
+
+      <!-- Payment Item -->
+      <div class="bg-gray-100 p-3 rounded-xl flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <span>💡</span>
+          <div>
+            <p class="font-medium">Electricity Bill</p>
+            <p class="text-xs text-gray-500">Today 01:44 AM</p>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-xs">⋮</button>
+      </div>
+
+      <div class="bg-gray-100 p-3 rounded-xl flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <span>🏦</span>
+          <div>
+            <p class="font-medium">Bank Deposit</p>
+            <p class="text-xs text-gray-500">Today 01:44 AM</p>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-xs">⋮</button>
+      </div>
+
+      <div class="bg-gray-100 p-3 rounded-xl flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <span>📱</span>
+          <div>
+            <p class="font-medium">Mobile Recharge</p>
+            <p class="text-xs text-gray-500">Today 01:44 AM</p>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-xs">⋮</button>
+      </div>
+
+      <div class="bg-gray-100 p-3 rounded-xl flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <span>🔥</span>
+          <div>
+            <p class="font-medium">Gas Bill</p>
+            <p class="text-xs text-gray-500">Today 01:44 AM</p>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-xs">⋮</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
