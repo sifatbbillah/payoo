@@ -1,5 +1,14 @@
 const validPin = 1234;
 const transactionData = [];
+// Log Out
+document.getElementById("logout-btn").addEventListener("click", function () {
+  // Clear session (optional, if you are storing anything in localStorage/sessionStorage)
+  sessionStorage.clear();
+  localStorage.clear();
+
+  // Redirect to login page
+  window.location.href = "index.html";
+});
 
 // helper functions
 function getInputValueNumber(id) {
@@ -210,4 +219,33 @@ document.getElementById("bonus-btn").addEventListener("click", function (e) {
   });
 
   alert("Bonus added successfully!");
+});
+// Pay Bill
+document.getElementById("pay-bill-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const billType = document.getElementById("bill-type").value;
+  const amount = getInputValueNumber("bill-amount");
+  const pin = getInputValueNumber("bill-pin");
+  const availableBalance = getInnerText("available-balance");
+
+  if (amount <= 0 || amount > availableBalance) {
+    alert("Invalid bill amount");
+    return;
+  }
+  if (pin !== validPin) {
+    alert("Invalid pin");
+    return;
+  }
+
+  const newBalance = availableBalance - amount;
+  setInnerText(newBalance);
+
+  transactionData.push({
+    name: `Bill Payment - ${billType}`,
+    amount: amount,
+    date: new Date().toLocaleString(),
+  });
+
+  alert(`Successfully paid ${amount} for ${billType} bill!`);
 });
